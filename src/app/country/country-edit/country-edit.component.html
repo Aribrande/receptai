@@ -1,1 +1,36 @@
-<p>country-edit works!</p>
+<div class="row mt-3">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">{{ country.Name }}</div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="form-label">Kodas:</label>
+                    <input type="text" class="form-control" [value]="country.Code" #code >
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Regionas:</label>
+                    <input type="text" class="form-control" [value]="country.Region" #region>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Plotas:</label>
+                    <input type="text" class="form-control" [value]="country.SurfaceArea" #surfaceArea >
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Nepriklausomybė pasklebta:</label>
+                    <input type="text" class="form-control" [value]="country.IndepYear" #year >
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Gyventojų skaičius:</label>
+                    <input type="text" class="form-control" [value]="country.Population" #population>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Tikėtina gyvenimo trukmė:</label>
+                    <input type="text" class="form-control" [value]="country.LifeExpectancy" #lifeExpectancy>
+                </div>
+                <a [routerLink]="['/country',id]" class="btn btn-success" >Atgal</a>
+                <a  class="btn btn-info float-end" (click)="update(code, region, surfaceArea, year, population, lifeExpectancy)" >Išsaugoti</a>
+                
+            </div>
+        </div>
+    </div>
+</div>

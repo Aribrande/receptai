@@ -28,6 +28,8 @@
                     <input type="text" class="form-control" [value]="country.LifeExpectancy" readonly>
                 </div>
                 <a routerLink="/" class="btn btn-success" >Atgal</a>
+                <a [routerLink]="['/country',id,'edit']" class="btn btn-info float-end" >Redaguoti</a>
+                
             </div>
         </div>
     </div>
